@@ -1,0 +1,12 @@
+{
+  "newUser": {
+    "name": "John QA Engineer",
+    "email": "john.qa@example.com",
+    "phone": "08012345678",
+    "website": "johndoe.com"
+  },
+  "updateUser": {
+    "name": "John Senior QA",
+    "email": "john.senior@example.com"
+  }
+}

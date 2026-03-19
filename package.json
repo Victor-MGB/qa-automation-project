@@ -1,0 +1,19 @@
+{
+  "name": "qa-automation-project",
+  "version": "1.0.0",
+  "description": "Advanced QA Automation Project using Cypress",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:login": "cypress run --spec 'cypress/e2e/tests/login.cy.js'",
+    "cy:run:cart": "cypress run --spec 'cypress/e2e/tests/cart.cy.js'",
+    "cy:report": "mochawesome-merge cypress/reports/*.json | marge --reportDir cypress/reports/html --inline",
+    "cy:all": "npm run cy:run && npm run cy:report"
+  },
+  "devDependencies": {
+    "cypress": "^15.12.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

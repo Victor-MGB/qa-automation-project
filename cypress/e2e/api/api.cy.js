@@ -1,9 +1,9 @@
 describe("API Tests - JSONPlaceholder", () => {
   const baseUrl = "https://jsonplaceholder.typicode.com";
 
-  // ✅ GET USER TESTS
+  // GET USER TESTS
   describe("Get User API", () => {
-    it("✅ Should get a single user successfully", () => {
+    it("Should get a single user successfully", () => {
       cy.request({
         method: "GET",
         url: `${baseUrl}/users/1`,
@@ -17,7 +17,7 @@ describe("API Tests - JSONPlaceholder", () => {
       });
     });
 
-    it("✅ Should get list of all users", () => {
+    it("Should get list of all users", () => {
       cy.request({
         method: "GET",
         url: `${baseUrl}/users`,
@@ -29,7 +29,7 @@ describe("API Tests - JSONPlaceholder", () => {
       });
     });
 
-    it("❌ Should return 404 for non-existent user", () => {
+    it("Should return 404 for non-existent user", () => {
       cy.request({
         method: "GET",
         url: `${baseUrl}/users/999`,
@@ -41,9 +41,9 @@ describe("API Tests - JSONPlaceholder", () => {
     });
   });
 
-  // ✅ GET POSTS TESTS
+  // GET POSTS TESTS
   describe("Get Posts API", () => {
-    it("✅ Should get all posts", () => {
+    it("Should get all posts", () => {
       cy.request({
         method: "GET",
         url: `${baseUrl}/posts`,
@@ -55,7 +55,7 @@ describe("API Tests - JSONPlaceholder", () => {
       });
     });
 
-    it("✅ Should get posts by user", () => {
+    it("Should get posts by user", () => {
       cy.request({
         method: "GET",
         url: `${baseUrl}/posts?userId=1`,
@@ -71,9 +71,9 @@ describe("API Tests - JSONPlaceholder", () => {
     });
   });
 
-  // ✅ CREATE USER TESTS
+  // CREATE USER TESTS
   describe("Create User API", () => {
-    it("✅ Should create a new user successfully", () => {
+    it("Should create a new user successfully", () => {
       cy.fixture("apidata").then((data) => {
         cy.request({
           method: "POST",
@@ -90,9 +90,9 @@ describe("API Tests - JSONPlaceholder", () => {
     });
   });
 
-  // ✅ UPDATE USER TESTS
+  // UPDATE USER TESTS
   describe("Update User API", () => {
-    it("✅ Should update a user successfully", () => {
+    it("Should update a user successfully", () => {
       cy.fixture("apidata").then((data) => {
         cy.request({
           method: "PUT",
@@ -107,7 +107,7 @@ describe("API Tests - JSONPlaceholder", () => {
       });
     });
 
-    it("✅ Should partially update a user (PATCH)", () => {
+    it(" Should partially update a user (PATCH)", () => {
       cy.request({
         method: "PATCH",
         url: `${baseUrl}/users/1`,
@@ -120,9 +120,9 @@ describe("API Tests - JSONPlaceholder", () => {
     });
   });
 
-  // ✅ DELETE USER TESTS
+  // DELETE USER TESTS
   describe("Delete User API", () => {
-    it("✅ Should delete a user successfully", () => {
+    it("Should delete a user successfully", () => {
       cy.request({
         method: "DELETE",
         url: `${baseUrl}/users/1`,

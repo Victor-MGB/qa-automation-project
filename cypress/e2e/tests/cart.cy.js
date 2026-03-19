@@ -44,7 +44,7 @@ describe("Cart Tests", () => {
     });
   });
 
-  it("✅ Should remove item from cart", () => {
+  it("Should remove item from cart", () => {
     cy.fixture("testdata").then((data) => {
       CartPage.addItemToCart(data.products.item1);
       CartPage.goToCart();

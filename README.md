@@ -1,5 +1,7 @@
 # QA Automation Project 
 
+![Cypress Tests](https://github.com/Victor-MGB/qa-automation-project/actions/workflows/cypress-tests.yml/badge.svg)
+
 An advanced end-to-end test automation framework built with Cypress, following the Page Object Model (POM) design pattern.
 
 ## Tech Stack
